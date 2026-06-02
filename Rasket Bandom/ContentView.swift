@@ -8,15 +8,14 @@ import SwiftUI
 import SpriteKit
 
 struct ContentView: View {
-    private let gameScene = GameScene()
+    private let titleScene = TitleScene(size: UIScreen.main.bounds.size)
     
     var body: some View {
-        VStack {
-            SpriteView(scene: gameScene)
-                .ignoresSafeArea()
-        }
+        SpriteView(scene: titleScene)
+            .ignoresSafeArea()
     }
 }
+
 
 #Preview {
     ContentView()
